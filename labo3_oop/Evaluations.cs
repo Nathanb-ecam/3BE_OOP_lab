@@ -18,6 +18,10 @@
         {
             return this.activity.ToString();
         }
+        public void SetNote(double value)
+        {
+            this.note = value;
+        }
         
     }
 }

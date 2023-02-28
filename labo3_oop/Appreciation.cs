@@ -11,14 +11,35 @@ namespace labo3_oop
             : base(acti)
         {
             this.appreciation= appreciation;
+            setNote();
         }
         public override double Note()
         {
             return base.Note();
         }
-        public void setAppreciation(string appreciation)
+        public void setNote()
         {
-            this.appreciation = appreciation;
+            switch (this.appreciation)
+            {
+                case "N":
+                    base.SetNote(4);
+                    break;
+                case "C":
+                    base.SetNote(8);
+                    break;
+                case "B":
+                    base.SetNote(12);
+                    break;
+                case "TB":
+                    base.SetNote(16);
+                    break;
+                case "X":
+                    base.SetNote(20);
+                    break;
+                default:
+                    base.SetNote(10);
+                    break;
+            }
         }
     }
 }
